@@ -13,7 +13,7 @@ interface Message {
 }
 export default async function MessagesAdminPage() {
     const messages = await getAllMessages();
-
+    console.log(messages)
     return (
         <AdminAuthWrapper>
             <div className="min-h-screen bg-gradient-to-br from-neutral-100 via-neutral-200 to-neutral-300 p-6">
