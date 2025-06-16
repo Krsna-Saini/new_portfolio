@@ -1,14 +1,14 @@
-// components/Contact.tsx
-'use client';
 
+'use client';
 import { useFormStatus } from 'react-dom';
 import { submitContactForm } from '@/lib/action';
 import { Loader2 } from 'lucide-react';
 import { useActionState, useEffect } from 'react';
-import { toast } from 'react-hot-toast';
+import { toast } from 'sonner';
+import { format } from 'date-fns';
 
 const SubmitButton = () => {
-  const { pending } = useFormStatus();
+  const { pending} = useFormStatus();
   return (
     <button
       type="submit"
@@ -37,7 +37,13 @@ export default function Contact() {
 
   useEffect(() => {
     if (state?.success) {
-      toast.success('Message sent successfully!');
+      toast.success("Message has been sent", {
+          description: `${format(new Date(), 'MMM d, yyyy - h:mm a')}`,
+          action: {
+            label: "Ok",
+            onClick: () => console.log("Ok"),
+          },
+        })
     } else if (state?.error) {
       toast.error(state.error);
     }

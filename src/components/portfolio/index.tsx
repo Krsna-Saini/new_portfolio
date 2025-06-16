@@ -45,17 +45,7 @@ const Portfolio = () => {
             gradient: 'from-pink-300 to-pink-200/1',
             titleColor: 'text-rose-600',
             linkColor: 'text-rose-500',
-        },
-        {
-            title: 'File Manager',
-            image: '/filemanager.png',
-            description:
-                'File upload/preview system with role-based access, filters, and export tools. Built using React, Express, and Tailwind.',
-            link: 'https://notes-mania-frontend.vercel.app/docs',
-            gradient: 'from-purple-300 to-purple-200/1',
-            titleColor: 'text-purple-600',
-            linkColor: 'text-purple-500',
-        },
+        }
     ];
 
 

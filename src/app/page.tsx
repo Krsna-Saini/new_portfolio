@@ -8,6 +8,7 @@ import About from "@/components/about";
 import Homecomponent from "@/components/home";
 import Resume from "@/components/resume";
 import Contact from "@/components/contact";
+import { Toaster } from "sonner";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
   return (
@@ -39,7 +40,9 @@ export default function Home() {
 
         {/* contact */}
         <Contact />
+        
       </div>
+      <Toaster/>
     </div>
   );
 }
