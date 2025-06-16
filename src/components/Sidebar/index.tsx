@@ -66,7 +66,7 @@ const Sidebar = ({
 
   return (
     <div
-      className={`w-84 flex flex-col h-screen overflow-y-auto overflow-x-hidden bg-neutral-900 absolute md:relative md:left-0 transition-all duration-500 ${isOpen ? 'left-0' : '-left-84'
+      className={`w-80 z-50 flex flex-col h-screen overflow-y-auto overflow-x-hidden bg-neutral-900 absolute md:relative md:left-0 transition-all duration-500 ${isOpen ? 'left-0' : '-left-84'
         }`}
     >
       {/* Close button */}
