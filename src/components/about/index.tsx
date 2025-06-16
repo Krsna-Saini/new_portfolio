@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Typewriter } from 'react-simple-typewriter';
 const About = () => {
   return (
-      <section id='about' className="min-h-screen w-full bg-gradient-to-r from-neutral-400 via-neutral-700 to-neutral-800 px-8 py-10 text-white">
+      <section id='about' className="min-h-screen w-full bg-gradient-to-r from-neutral-400 via-neutral-700 to-neutral-800 px-6 py-10 text-white">
         <h2 className="md:text-7xl text-5xl font-bold mb-6 border-b-8 w-fit border-blue-600">About Me</h2>
         <div className="max-w-7xl mx-auto">
           {/* Typewriter heading */}
@@ -29,7 +29,7 @@ const About = () => {
           </p>
   
           {/* Image + Details Grid */}
-          <div className="lg:flex  justify-between items-start">
+          <div className="lg:flex gap-4 justify-between items-start">
             {/* Image */}
             <div className="w-fit">
               <Image
