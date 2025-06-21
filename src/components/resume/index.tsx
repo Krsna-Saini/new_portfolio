@@ -2,9 +2,9 @@ import React from 'react'
 
 const Resume = () => {
   return (
-    <section id='resume' className="min-h-screen w-full bg-gradient-to-r from-neutral-400 via-neutral-700 to-neutral-800 px-8 py-16 text-white">
+    <section id='resume' className="min-h-screen w-full bg-black px-8 py-16 text-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="md:text-7xl text-4xl font-bold mb-12 text-green-300">Resume</h2>
+        <h2 className="md:text-7xl text-4xl font-bold mb-12 text-teal-300">Resume</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Education Section */}
@@ -58,29 +58,29 @@ const Resume = () => {
         <div className="mt-16">
           <h3 className="text-2xl font-semibold mb-4">🛠️ Skills</h3>
           <div className="flex flex-wrap gap-4 text-sm text-neutral-100">
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">Next.js</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">React</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">TailwindCSS</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">Firebase</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">MongoDB</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">Redux Toolkit</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">GraphQL</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">Git & GitHub</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">Framer Motion</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">Next.js</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">React</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">TailwindCSS</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">Firebase</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">MongoDB</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">Redux Toolkit</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">GraphQL</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">Git & GitHub</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">Framer Motion</span>
           </div>
         </div>
         {/* Languages */}
         <div className="mt-16">
           <h3 className="text-2xl font-semibold mb-4">💻 Languages I Know</h3>
           <div className="flex flex-wrap gap-4 text-sm text-neutral-100">
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">Python</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">C</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">C++</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">JavaScript</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">TypeScript</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">HTML</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">CSS</span>
-            <span className="bg-neutral-600 px-3 py-1 rounded-full">SQL</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">Python</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">C</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">C++</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">JavaScript</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">TypeScript</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">HTML</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">CSS</span>
+            <span className="bg-cyan-600 px-3 py-1 rounded-full">SQL</span>
           </div>
         </div>
       </div>

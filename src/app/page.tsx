@@ -12,31 +12,30 @@ import { Toaster } from "sonner";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="flex w-screen  relative bg-gray-800">
+    <div className="w-screen  relative bg-gray-800">
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className="h-screen w-full overflow-y-auto overflow-x-hidden">
+      <div className="h-screen w-full bg-black absolute top-0 overflow-y-auto overflow-x-hidden">
         {/* home */}
         <Homecomponent isOpen={isOpen} setIsOpen={setIsOpen}/>
 
         {/* seperator */}
-        <hr className="w-4/5 border-t border-gray-700 my-4 mx-auto" />
+        <hr className="w-4/5 bg-cyan-400 h-0.5 rounded-[100%] my-4 mx-auto" />
 
         {/* about */}
         <About />
-
         {/* seperator */}
-        <hr className="w-4/5 border-t border-gray-700 my-4 mx-auto" />
+        <hr className="w-4/5  bg-cyan-200 h-0.5 rounded-[100%] my-4 mx-auto" />
 
         {/* Resume */}
         <Resume />
 
         {/* seperator */}
-        <hr className="w-4/5 border-t border-gray-700 my-4 mx-auto" />
+        <hr className="w-4/5  bg-cyan-200 h-0.5 rounded-[100%] my-4 mx-auto" />
 
         {/* Portfolio */}
         <Portfolio />
         {/* seperator */}
-        <hr className="w-4/5 border-t border-gray-700 my-4 mx-auto" />
+        <hr className="w-4/5  bg-cyan-200 h-0.5 rounded-[100%] my-4 mx-auto" />
 
         {/* contact */}
         <Contact />
