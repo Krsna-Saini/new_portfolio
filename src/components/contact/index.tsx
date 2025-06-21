@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex items-center justify-center min-h-screen bg-black px-4 md:px-8 py-16 text-white"
+      className="flex items-center justify-center min-h-screen bg-neutral-950 px-4 md:px-8 py-16 text-white"
     >
       <div className="w-full sm:max-w-4xl bg-white/5 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-14 border border-white/10">
         <div className="mb-12 text-center">

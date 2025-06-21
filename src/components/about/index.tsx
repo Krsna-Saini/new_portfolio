@@ -2,12 +2,12 @@ import React from 'react'
 import Image from 'next/image';
 const About = () => {
   return (
-    <section id='about' className="min-h-screen bg-black w-full bg- px-6 py-10 text-white">
+    <section id='about' className="min-h-screen bg-neutral-950 w-full bg- px-6 py-10 text-white">
       <div className="max-w-7xl mx-auto">
         {/* Image + Details Grid */}
         <div className="lg:flex gap-4 justify-between items-start">
           {/* Image */}
-          <div className="w-fit md:h-screen flex items-center justify-center">
+          <div className="w-fit lg:h-screen flex items-center justify-center">
             <Image
               src="/profile2.jpg"
               alt="Krishna's Profile"

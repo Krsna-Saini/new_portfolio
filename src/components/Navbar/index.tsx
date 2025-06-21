@@ -3,9 +3,9 @@
 import { Layers2, SparklesIcon, StarsIcon, X } from 'lucide-react';
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 
-const sections = ['home', 'about', 'resume', 'portfolio', 'contact'];
+const sections = ['home', 'about', 'timeline', 'portfolio', 'contact'];
 
-const Sidebar = ({
+const Navbar = ({
   isOpen,
   setIsOpen,
 }: {
@@ -39,39 +39,41 @@ const Sidebar = ({
     observerRef.current = observer;
     return () => observerRef.current?.disconnect();
   }, []);
-
   return (
     <div
-      className={` flex items-center md:justify-center justify-end z-50 h-fit w-screen py-4 bg-transparent sticky top-10  transition-all duration-500 ${isOpen ? '' : 'hidden md:flex'
+      className={` flex  items-center md:justify-center justify-end z-50 h-fit w-screen py-4 bg-transparent sticky top-0  transition-all duration-500 ${isOpen ? '' : 'hidden md:flex'
         }`}
     >
-      <div className='md:w-full md:mx-15 mx-8 px-3 py-3 flex flex-col md:flex-row justify-between md:rounded-full rounded-2xl items-center bg-gradient-to-r from-teal-800   to-teal-600'>
+      <div className='md:w-[80%] md:mx-15 mx-8 px-3 py-3 absolute top-4 flex flex-col md:flex-row justify-between md:rounded-full rounded-2xl items-center bg-gradient-to-r from-teal-800 via-teal-600/80  to-teal-500/80'>
         <div className=" w-full flex justify-end md:hidden">
           <div className="flex w-fit p-2 rounded-full bg-cyan-400 justify-end items-center ">
             <X onClick={() => setIsOpen(false)} className="cursor-pointer" />
           </div>
         </div>
         <div className='w-45 hidden md:flex'>
-          <div className='ml-5 p-2 rounded-full bg-teal-600 w-fit'> 
-            <Layers2 className='text-lg text-teal-200'/>
+          <div className='ml-5 p-2 rounded-full bg-teal-600 w-fit'>
+            <Layers2 className='text-lg text-teal-200' />
           </div>
         </div>
         <div className=" mx-2 gap-3 flex flex-col md:flex-row items-center justify-center">
           <NavigatorComponent title="home" active={activeSection === 'home'} />
           <NavigatorComponent title="about" active={activeSection === 'about'} />
-          <NavigatorComponent title="resume" active={activeSection === 'resume'} />
+          <NavigatorComponent title="timeline" active={activeSection === 'timeline'} />
           <NavigatorComponent title="portfolio" active={activeSection === 'portfolio'} />
         </div>
         <div className='w-45'>
-          <button onClick={() => {
-            const el = document.getElementById("contact");
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}
-            className='flex items-center gap-3 px-3 py-2 rounded-full bg-teal-500 transition-all duration-300 text-white cursor-pointer hover:scale-105'>
-            <StarsIcon className='size-4 text-cyan-300' />
-            <span className='font-semibold text-lg'>Contact Us</span>
-            <SparklesIcon className='size-4 text-cyan-300' />
+          <button
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="flex items-center gap-3 px-4 py-2 rounded-full bg-teal-500/90 text-white font-semibold text-lg cursor-pointer shadow-lg hover:scale-105 hover:bg-teal-400 hover:shadow-xl transition-all duration-300"
+          >
+            <StarsIcon className="size-4 text-cyan-200 drop-shadow-md" />
+            <span className="font-semibold">Contact Us</span>
+            <SparklesIcon className="size-4 text-cyan-200 drop-shadow-md" />
           </button>
+
         </div>
       </div>
 
@@ -79,7 +81,7 @@ const Sidebar = ({
   );
 };
 
-export default Sidebar;
+export default Navbar;
 
 // ========== NavigatorComponent ==========
 const NavigatorComponent = ({
@@ -97,7 +99,7 @@ const NavigatorComponent = ({
   return (
     <div
       onClick={handleClick}
-      className={`px-4 w-full py-1 rounded-lg cursor-pointer transition-all border-transparent border-b-5 ${active ? 'text-lg text-white  border-b-cyan-400 font-bold' : 'text-white'
+      className={`px-4 w-full py-1 rounded-xl cursor-pointer transition-all border-transparent border-b-5 ${active ? 'text-lg text-white  border-b-cyan-400 font-bold' : 'text-white'
         }`}
     >
       <span className="capitalize">{title}</span>

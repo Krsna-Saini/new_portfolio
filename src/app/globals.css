@@ -120,3 +120,6 @@
     @apply bg-background text-foreground;
   }
 }
+.body{
+  outline: 2px red ;
+}

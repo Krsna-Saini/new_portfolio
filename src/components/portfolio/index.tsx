@@ -7,7 +7,8 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from 'next/image'
-import { Link } from 'lucide-react'
+import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+import { Link } from 'lucide-react';
 const Portfolio = () => {
     const projects = [
         {
@@ -16,9 +17,6 @@ const Portfolio = () => {
                 'A modern full-stack platform for users to book appointments with lawyers and for advocates to showcase their expertise. Built with Next.js, MongoDB, Tailwind, and Redux.js.',
             image: '/bettercallsaul.png',
             link: 'https://better-call-saul-frontend.vercel.app/',
-            gradient: 'from-[#fef5ec] via-[#fef5ec] to-[#fef5ec]/1',
-            titleColor: 'text-[#e07a1f]',
-            linkColor: 'text-[#e07a1f]',
         },
         {
             title: 'AI Chat Application',
@@ -26,9 +24,6 @@ const Portfolio = () => {
             description:
                 'An AI-powered chat platform featuring group chat, audio messages, attachments, and follow-up prompts with message context.',
             link: 'https://chatgpt-gray-xi.vercel.app/',
-            gradient: 'from-neutral-300 via-neutral-100 to-white/1',
-            titleColor: 'text-black',
-            linkColor: 'text-neutral-900',
         },
         {
             title: 'NotesMania',
@@ -36,9 +31,6 @@ const Portfolio = () => {
             description:
                 'A platform for students to organize and share notes, assignments, and academic content. Designed to replace unorganized WhatsApp sharing.',
             link: 'https://notes-mania-frontend.vercel.app/',
-            gradient: 'from-pink-300 via-pink-100 to-pink-200/1',
-            titleColor: 'text-rose-600',
-            linkColor: 'text-rose-500',
         },
         {
             title: 'Nexus',
@@ -46,51 +38,59 @@ const Portfolio = () => {
             description:
                 'A productivity platform for everyone to manage tasks, deadlines, and content efficiently. Designed to streamline organization and reduce dependency on WhatsApp for information sharing.',
             link: 'https://nexus-two-snowy.vercel.app/',
-            gradient: 'from-blue-300 via-blue-100 to-blue-200/1',
-            titleColor: 'text-blue-600',
-            linkColor: 'text-blue-500',
         }
     ];
 
 
     return (
-        <section id='portfolio' className="min-h-screen bg-black px-8 py-16 text-white">
+        <section id='portfolio' className="h-fit bg-neutral-950 px-8 py-16 text-white">
             <div className=" px-4 md:px-10 w-full mx-auto flex flex-col items-center">
-                <h2 className="md:text-7xl text-4xl font-bold text-teal-300 mb-12 w-full">🚀 Portfolio</h2>
+                <h2 className="md:text-7xl text-4xl font-bold text-teal-300 mb-12 w-full"> Portfolio</h2>
                 <Carousel className=" w-full">
                     <CarouselContent className="py-6 px-10">
                         {projects.map((project, index) => (
                             <CarouselItem
                                 key={index}
-                                className=" flex flex-col w-100 my-3 items-center scale-[0.8] md:scale-100 mx-1 min-w-80 md:mx-3 basis-1/1 md:basis-1/2 lg:basis-1/3 backdrop-blur-md rounded-2xl bg-cyan-600 overflow-hidden transition-transform p-0"
+                                className=" flex flex-col h-full w-100  my-3 items-center scale-[0.8] md:scale-100 mx-1 min-w-80 md:mx-3 basis-1/1 md:basis-1/2 lg:basis-1/3 backdrop-blur-md rounded-3xl overflow-hidden transition-transform p-0"
                             >
-
-                                <div className="relative w-fit mt-3">
-                                    <Image
-                                        src={project.image}
-                                        alt={`${project.title} homepage`}
-                                        width={1000}
-                                        height={1000}
-                                        className="rounded-2xl h-80 w-90  object-right-top"
-                                    />
-
-                                </div>
-                                <div>
-                                <div className='w-full flex justify-between items-center px-5 my-5 '>
-                                    <strong className='text-2xl'>{project.title}</strong>
-                                    <a
-                                       href={project.link}
-                                        className='flex items-center gap-2 px-4 py-2 rounded-full bg-black transition-all duration-300 text-cyan-400 cursor-pointer hover:scale-105'>
-                                        <Link className='size-4 text--400'/>
-                                        View
-                                    </a>
-                                </div>
-                                <div className='w-full flex justify-between items-center px-5 mb-2 '>
-                                   <p className='font-semibold'>
-                                    {project.description}
-                                </p> 
-                                </div>
-                                
+                                <div className='h-full w-full'>
+                                    <CardContainer className="inter-var px-5 min-h-115">
+                                        <CardBody className="bg-zinc-900 relative max-w-95 group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.2]   sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                                            <CardItem
+                                                translateZ="100"
+                                                className="w-full mt-4">
+                                                <Image
+                                                    src={project.image}
+                                                    alt="jordans"
+                                                    height="850"
+                                                    width="850"
+                                                    className="object-contain rounded-2xl"
+                                                />
+                                            </CardItem>
+                                            <CardItem
+                                                translateZ="50"
+                                                className="text-xl font-bold text-white">
+                                                <span className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
+                                                    {project.title}
+                                                </span>
+                                            </CardItem>
+                                            <CardItem as="p"
+                                                translateZ="60"
+                                                className="text-sm max-w-sm mt-2 text-neutral-300">
+                                                <span className="text-sm text-neutral-400">
+                                                    {project.description}
+                                                </span>
+                                            </CardItem>
+                                            <CardItem>
+                                                <button className="rounded-full cursor-pointer pl-4 pr-1 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">
+                                                    <span>Visit now </span>
+                                                    <a href={project.link} className="bg-zinc-700 rounded-full  px-2 py-1 text-white">
+                                                        <Link size={13} />
+                                                    </a>
+                                                </button>
+                                            </CardItem>
+                                        </CardBody>
+                                    </CardContainer>
                                 </div>
                             </CarouselItem>
                         ))}
