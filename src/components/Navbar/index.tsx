@@ -3,7 +3,8 @@
 import { Layers2, SparklesIcon, StarsIcon, X } from 'lucide-react';
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 
-const sections = ['home', 'about', 'timeline', 'portfolio', 'contact'];
+const sections = ['timeline', 'home', 'about', 'portfolio', 'contact'];
+
 
 const Navbar = ({
   isOpen,
@@ -21,7 +22,18 @@ const Navbar = ({
       (entries) => {
         entries.forEach((entry) => {
           const id = entry.target.id;
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          const rect = entry.boundingClientRect;
+          const viewportHeight = window.innerHeight
+          const coverage =
+            Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+          const el = document.getElementById(id);
+          if (el) {
+            console.log('Observing:', id); // Add this
+            observer.observe(el);
+          } else {
+            console.warn('NOT FOUND:', id); // Add this too
+          }
+          if (coverage >= viewportHeight / 2) {
             setActiveSection(id);
           }
         });
@@ -39,6 +51,7 @@ const Navbar = ({
     observerRef.current = observer;
     return () => observerRef.current?.disconnect();
   }, []);
+  console.log(activeSection)
   return (
     <div
       className={` flex  items-center md:justify-center justify-end z-50 h-fit w-screen py-4 bg-transparent sticky top-0  transition-all duration-500 ${isOpen ? '' : 'hidden md:flex'
@@ -61,7 +74,7 @@ const Navbar = ({
           <NavigatorComponent title="timeline" active={activeSection === 'timeline'} />
           <NavigatorComponent title="portfolio" active={activeSection === 'portfolio'} />
         </div>
-        <div className='w-45'>
+        <div className='w-45 mt-2 md:mt-0'>
           <button
             onClick={() => {
               const el = document.getElementById("contact");

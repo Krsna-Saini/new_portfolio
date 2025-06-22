@@ -58,7 +58,7 @@ const Portfolio = () => {
                                         <CardBody className="bg-zinc-900 relative max-w-95 group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.2]   sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                                             <CardItem
                                                 translateZ="100"
-                                                className="w-full mt-4">
+                                                className="w-full my-4">
                                                 <Image
                                                     src={project.image}
                                                     alt="jordans"
@@ -69,8 +69,8 @@ const Portfolio = () => {
                                             </CardItem>
                                             <CardItem
                                                 translateZ="50"
-                                                className="text-xl font-bold text-white">
-                                                <span className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
+                                                className="text-xl font-bold text-white ">
+                                                <span className="text-base sm:text-xl mt-6 mb-2 text-neutral-200">
                                                     {project.title}
                                                 </span>
                                             </CardItem>
@@ -81,7 +81,9 @@ const Portfolio = () => {
                                                     {project.description}
                                                 </span>
                                             </CardItem>
-                                            <CardItem>
+                                            <CardItem
+                                             translateZ={40}
+                                            >
                                                 <button className="rounded-full cursor-pointer pl-4 pr-1 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">
                                                     <span>Visit now </span>
                                                     <a href={project.link} className="bg-zinc-700 rounded-full  px-2 py-1 text-white">

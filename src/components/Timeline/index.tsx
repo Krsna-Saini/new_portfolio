@@ -144,8 +144,10 @@ export default function TimelinePortfolio() {
 ];
 
   return (
-    <section  id="timeline" className="relative w-full min-h-screen">
+    <div  className="w-full relative overflow-clip">
+      <section id="timeline"  className="absolute top-0 w-full min-h-screen right-0 z-0">
+      </section>
         <Timeline data={data} />
-    </section>
+    </div>
   );
 }

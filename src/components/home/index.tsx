@@ -26,7 +26,7 @@ const Homecomponent = ({ setIsOpen, isOpen }: {
 
   ]
   return (
-    <section id='home' className="h-screen relative -top-20 flex items-center justify-between px-3 md:pl-10 bg-neutral-950">
+    <section id='home' className="h-screen relative -top-10 md:-top-20 flex items-center justify-between px-3 md:pl-10 bg-neutral-950">
       <div className={` ${isOpen && "hidden"} absolute md:hidden z-50 top-20 right-5 bg-cyan-400 p-2 rounded-full`}>
         <SidebarOpenIcon onClick={() => {
           setIsOpen(true)
