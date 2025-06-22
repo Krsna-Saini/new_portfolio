@@ -2,7 +2,6 @@
 
 import { Layers2, SparklesIcon, StarsIcon, X } from 'lucide-react';
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-
 const sections = ['timeline', 'home', 'about', 'portfolio', 'contact'];
 
 
@@ -63,7 +62,7 @@ const Navbar = ({
             <X onClick={() => setIsOpen(false)} className="cursor-pointer" />
           </div>
         </div>
-        <div className='w-45 hidden md:flex'>
+        <div className='w-40 hidden md:flex'>
           <div className='ml-5 p-2 rounded-full bg-teal-600 w-fit'>
             <Layers2 className='text-lg text-teal-200' />
           </div>
@@ -80,7 +79,7 @@ const Navbar = ({
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex items-center gap-3 px-4 py-2 rounded-full bg-teal-500/90 text-white font-semibold text-lg cursor-pointer shadow-lg hover:scale-105 hover:bg-teal-400 hover:shadow-xl transition-all duration-300"
+            className="flex items-center gap-3 px-4 py-2 rounded-full bg-teal-400 text-white font-semibold text-lg cursor-pointer shadow-lg hover:scale-105 hover:bg-teal-400 hover:shadow-xl transition-all duration-300"
           >
             <StarsIcon className="size-4 text-cyan-200 drop-shadow-md" />
             <span className="font-semibold">Contact Us</span>
