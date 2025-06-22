@@ -57,7 +57,7 @@ const Navbar = ({
       className={` flex  items-center md:justify-center justify-end z-50 h-fit w-screen py-4 bg-transparent sticky top-0  transition-all duration-500 ${isOpen ? '' : 'hidden md:flex'
         }`}
     >
-      <div className='md:w-[80%] md:mx-15 mx-8 px-3 py-3 absolute top-4 flex flex-col md:flex-row justify-between md:rounded-full rounded-2xl items-center bg-gradient-to-r from-teal-800 via-teal-600/80  to-teal-500/80'>
+      <div className='md:w-[90%] lg:w-[80%] md:mx-15 mx-8 px-3 py-3 absolute top-4 flex flex-col md:flex-row justify-between md:rounded-full rounded-2xl items-center bg-gradient-to-r from-teal-800 via-teal-600/80  to-teal-500/80'>
         <div className=" w-full flex justify-end md:hidden">
           <div className="flex w-fit p-2 rounded-full bg-cyan-400 justify-end items-center ">
             <X onClick={() => setIsOpen(false)} className="cursor-pointer" />
