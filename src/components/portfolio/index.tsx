@@ -84,12 +84,14 @@ const Portfolio = () => {
                                             <CardItem
                                              translateZ={40}
                                             >
+                                                <a href={project.link}  target="_blank" rel="noopener noreferrer">
                                                 <button className="rounded-full cursor-pointer pl-4 pr-1 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">
                                                     <span>Visit now </span>
-                                                    <a href={project.link} className="bg-zinc-700 rounded-full  px-2 py-1 text-white">
+                                                    <div  className="bg-zinc-700 rounded-full  px-2 py-1 text-white">
                                                         <Link size={13} />
-                                                    </a>
+                                                    </div>
                                                 </button>
+                                                </a>
                                             </CardItem>
                                         </CardBody>
                                     </CardContainer>
