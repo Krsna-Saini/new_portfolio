@@ -43,7 +43,7 @@ const Portfolio = () => {
 
 
     return (
-        <section id='portfolio' className="h-fit bg-neutral-950 px-8 py-16 text-white">
+        <section id='portfolio' className="h-screen bg-neutral-950 px-8 py-16 text-white">
             <div className=" px-4 md:px-10 w-full mx-auto flex flex-col items-center">
                 <h2 className="md:text-7xl text-4xl font-bold text-teal-300 mb-12 w-full"> Portfolio</h2>
                 <Carousel className=" w-full">
