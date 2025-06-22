@@ -11,21 +11,7 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { Link } from 'lucide-react';
 const Portfolio = () => {
     const projects = [
-        {
-            title: 'Better Call Saul',
-            description:
-                'A modern full-stack platform for users to book appointments with lawyers and for advocates to showcase their expertise. Built with Next.js, MongoDB, Tailwind, and Redux.js.',
-            image: '/bettercallsaul.png',
-            link: 'https://better-call-saul-frontend.vercel.app/',
-        },
-        {
-            title: 'AI Chat Application',
-            image: '/chatassistant.png',
-            description:
-                'An AI-powered chat platform featuring group chat, audio messages, attachments, and follow-up prompts with message context.',
-            link: 'https://chatgpt-gray-xi.vercel.app/',
-        },
-        {
+       {
             title: 'NotesMania',
             image: '/notesmania.png',
             description:
@@ -38,7 +24,22 @@ const Portfolio = () => {
             description:
                 'A productivity platform for everyone to manage tasks, deadlines, and content efficiently. Designed to streamline organization and reduce dependency on WhatsApp for information sharing.',
             link: 'https://nexus-two-snowy.vercel.app/',
-        }
+        },
+        {
+            title: 'AI Chat Application',
+            image: '/chatassistant.png',
+            description:
+                'An AI-powered chat platform featuring group chat, audio messages, attachments, and follow-up prompts with message context.',
+            link: 'https://chatgpt-gray-xi.vercel.app/',
+        }, 
+        {
+            title: 'Better Call Saul',
+            description:
+                'A modern full-stack platform for users to book appointments with lawyers and for advocates to showcase their expertise. Built with Next.js, MongoDB, Tailwind, and Redux.js.',
+            image: '/bettercallsaul.png',
+            link: 'https://better-call-saul-frontend.vercel.app/',
+        } 
+       
     ];
 
 
