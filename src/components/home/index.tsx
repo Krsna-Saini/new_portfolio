@@ -56,7 +56,7 @@ const Homecomponent = ({ setIsOpen, isOpen }: {
   return (
     <section id='home' className="h-screen relative -top-10 md:-top-20 flex items-center justify-between px-3 md:pl-10 bg-neutral-950">
 
-      <div className={` ${isOpen && "hidden"} absolute md:hidden z-50 top-20 right-5 bg-cyan-400 p-2 rounded-full`}>
+      <div className={` ${isOpen && "hidden"} absolute md:hidden z-50 top-10 right-5 bg-cyan-400 p-2 rounded-full`}>
         <SidebarOpenIcon onClick={() => {
           setIsOpen(true)
         }} />
@@ -88,7 +88,7 @@ const Homecomponent = ({ setIsOpen, isOpen }: {
               const el = document.getElementById("portfolio");
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className='flex items-center gap-3 px-3 md:gap-6 md:px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all border border-white duration-300 text-white cursor-pointer hover:scale-105'
+            className='flex items-center gap-2 px-2 md:gap-6 md:px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all border border-white duration-300 text-white cursor-pointer hover:scale-105'
           >
             <StarsIcon className='size-4 text-teal-200' />
             <span className='font-semibold md:text-lg'>My Projects</span>
@@ -100,7 +100,7 @@ const Homecomponent = ({ setIsOpen, isOpen }: {
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className='flex items-center gap-3 px-3 md:gap-6 md:px-6 py-3 rounded-full hover:bg-white transition-all hover:text-black border-white border duration-300 text-white cursor-pointer hover:scale-105'
+            className='flex items-center gap-2 px-2 md:gap-6 md:px-6 py-3 rounded-full hover:bg-white transition-all hover:text-black border-white border duration-300 text-white cursor-pointer hover:scale-105'
           >
             <StarsIcon className='size-4 text-teal-200' />
             <span className='font-semibold md:text-lg'>Dowload CV</span>
