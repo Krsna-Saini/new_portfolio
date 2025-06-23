@@ -42,7 +42,7 @@ const Homecomponent = ({ setIsOpen, isOpen }: {
       icon: (
         <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://www.instagram.com/krishna_saini_27/"
+      href: "https://www.instagram.com/krishna_saini?igsh=MTVrYjg1aGV3MHQ2aw=="
     },
     {
       title: 'WhatsApp',
