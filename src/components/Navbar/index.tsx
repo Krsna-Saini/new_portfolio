@@ -79,10 +79,10 @@ const Navbar = ({
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex items-center gap-3 px-4 py-2 rounded-full bg-teal-400 text-white font-semibold text-lg cursor-pointer shadow-lg hover:scale-105 hover:bg-teal-400 hover:shadow-xl transition-all duration-300"
+            className="flex items-center gap-2 lg:gap-3 px-2 lg:px-4 py-2 rounded-full bg-teal-400 text-white font-semibold text-lg cursor-pointer shadow-lg hover:scale-105 hover:bg-teal-400 hover:shadow-xl transition-all duration-300"
           >
             <StarsIcon className="size-4 text-cyan-200 drop-shadow-md" />
-            <span className="font-semibold">Contact Us</span>
+            <span className="font-semibold text-sm md:text-base">Contact Us</span>
             <SparklesIcon className="size-4 text-cyan-200 drop-shadow-md" />
           </button>
 
