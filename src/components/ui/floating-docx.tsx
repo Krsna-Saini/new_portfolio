@@ -68,6 +68,8 @@ const FloatingDockMobile = ({
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
                 <a
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   href={item.href}
                   key={item.title}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900"

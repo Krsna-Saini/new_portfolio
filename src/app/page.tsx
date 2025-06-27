@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <div className="max-w-screen relative  bg-neutral-950">
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Option onClick={()=>{
+      <Option onClick={() => {
         setIsOpen(true)
-      }}/>
+      }} />
       <div className=" relative max-w-screen overflow-x-hidden ">
         {/* home */}
         <Homecomponent isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -31,7 +31,7 @@ export default function Home() {
         <hr className="w-7/8  bg-cyan-500/90 shadow-2xl shadow-cyan-300 h1  rounded-[100%] my-4 mx-auto" />
 
         {/* Resume */}
-        <Timeline/>
+        <Timeline />
 
         {/* seperator */}
         <hr className="w-7/8  bg-cyan-500/90 shadow-2xl shadow-cyan-300 h1  rounded-[100%] my-4 mx-auto" />
